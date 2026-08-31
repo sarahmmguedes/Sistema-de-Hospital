@@ -5,8 +5,15 @@
 <div class="container">
 <h2>Atendimento</h2>
 
-<input id="nome" placeholder="Nome">
-<input id="cpf" placeholder="CPF">
+<input id="nome" placeholder="Nome Completo">
+<input id="cpf" placeholder="CPF/RG">
+<input id="nascimento" placeholder="Data de Nascimento">
+<input id="sexo" placeholder="Nome da Mãe">
+<input id="estado" placeholder="Estado Civil">
+<input id="endereço" placeholder="Endereço">
+<input id="telefone" placeholder="Telefone">
+<input id="email" placeholder="E-mail">
+<input id="contato" placeholder="Contato de Emergência">
 
 <select id="tipo">
   <option>Convenio</option>
@@ -26,7 +33,14 @@ function cadastrar(){
   body: JSON.stringify({
     nome: nome.value,
     cpf: cpf.value,
-    tipo: tipo.value
+    tipo: tipo.value,
+    sexo: sexo.value,
+    estado: estado.value,
+    endereço: endereço.value,
+    telefone: telefone.value,
+    email: email.value,
+    contato: contato.value
+    
   })
  });
  alert("Paciente enviado para triagem");
